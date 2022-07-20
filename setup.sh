@@ -44,7 +44,7 @@ configure_gameserver () {
     echo "Internal Server IP-Address: $(hostname -I | sed -s 's/\s//g' | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -n1)"
 
     echo "After you started the server again, friends can connect to the server via: "
-    echo "External Server IP-Address: $(curl -4 icanhazip.com):10578" 
+    echo "External Server IP-Address: $(curl -s -4 icanhazip.com):10578" 
 }
 
 if gameserver_setup; then
